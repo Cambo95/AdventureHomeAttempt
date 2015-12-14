@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>AdventureBlog</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <script src="menu.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="mainContainer">
+
+    <div id="topBar">
+        <div class="innertext">Home of Adventures</h1>
+            <a href="#"><img src="images/header3.jpg" /></a>
+        </div><!-- close innertext -->
+        <div id="topnav">
+            <ul>
+                <li><a href="Adventure.php">Adventures</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+            </ul>
+        </div><!-- close topnav -->
+    </div><!-- close topBar -->
+
+    <div id="leftMenu">
+
+        <!-- START OF MENU -->
+        <?php include_once "menu.php"; ?>
+        <!-- END OF MENU -->
+        <script type="text/javascript">
+            initSlideDownMenu();
+        </script>
+    </div><!-- close leftMenu -->
+
+    <div id="mainContent">
+        <div class="clear"></div>
+        <div id="interiorPages">
+            <div id="topspace"></div><!-- close topspace -->
+
+            <?php
+
+ if(isset($_GET['product']))
+  {     include_once("interior.php");      }
+
+ else if(($product == "")) {
+        include_once("index1.php");
+    }
+?>
+
+        </div><!-- close interiorPages -->
+        <div class="clear"> <p>&nbsp;</p></div>
+    </div><!--close mainContent -->
+    <div class="clear"> <p>&nbsp;</p></div>
+    <div id="footer">
+        <h2 class="footerleft">Copyright &copy; Copyright notice here. </h2>
+    </div><!-- close footer -->
+</div><!-- close mainContainer --><br>
+
+</body>
+</html>
