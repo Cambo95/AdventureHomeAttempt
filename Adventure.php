@@ -6,7 +6,7 @@ $conn = new mysqli(
     "5a698004"
     "Adventure"
 );
-
+//
 if ($conn->connect_error) {
     die("Connection has failed " . $conn->connect_error);
 }
